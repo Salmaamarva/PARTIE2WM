@@ -1,0 +1,32 @@
+# PARTIE2WM
+Partie 1: COG 
+Nous avons exécuté deux codes basé sur deux approches differentes sur la meme donnée COG: bathymetrie.
+1/Approche JAVASCRIPT/LEAFLET
+        Axée sur l’interactivité dynamique, COG ajouté directement sous format dynamique de fichiers GeoTIFF.
+        Prend quelque secondes pour s’afficher.
+        Plus nous zoomons sur la map , plus la résolution s’améliore.
+2/Approche PYTHON
+        Orientée vers la génération statique d’image sous format PNG.
+        Meilleure gestion de la transparence et des palettes de couleurs.
+        S’affiche directement sans aucun temps d’attente.
+        Le niveau de zoom ne change en rien la résolution de l’image.
+Partie 2: GEOJSON: 
+Deux cartes sont affichées : la première présente un jeu de données limité de la région de Lhaouz, permettant ainsi une premiere comparaison entre l'affichage d'un GeoJSON avec un petit jeu de données et un autre avec un jeu de données plus vaste
+Partie 3: GEOParquet: 
+La meme chose a été réalisé pour le cas du geoparquet. 
+COMPARAISON ENTRE LES DEUX FORMES: 
+•Pour geoparquet:	Aucun temps d’attente, les données s’affiche de manière spontanée, le zoom est efficace sans retard.
+•Pour geojson:	Le zoom avant et arrière crée un certain temps d’attente , l'utilisation d'une dataset plus large pourrait entrainer des BUGS.
+Partie 4: ZARR: 
+
+PROBLEMES RENCONTRés:
+1)	Base maps : 
+Base maps : la carte du maroc est retrouvé tronqué sur toute les base maps que nous avons essayé . 
+Carto base map et Leaflet
+2)	Data availability :
+La recherche de la data a été le premier enjeux de ce mini projet ,nous avons eu recours a plusieurs sources et parfois de création de données aléatoire pour permettre une comparaison de certains formats. 
+3)	Hosting :
+Nous avons rencontré des problèmes liés à l'intégration des URL dans le cadre de la politique CORS (Cross-Origin Resource Sharing) lors de l'utilisation de plateformes comme GitLab et GitHub avec JavaScript. Pour résoudre ces limitations, nous avons opté pour les solutions suivantes :
+•	Hébergement local : Mise en place d'un environnement local sur notre PC pour héberger et appeler les données directement stockées en local, évitant ainsi les restrictions liées aux politiques CORS. Cependant, cette approche n'a pas abouti à un résultat satisfaisant.
+•	Utilisation de Python : Implémentation de scripts Python pour simplifier l'accès et le traitement des données, en contournant les contraintes imposées par les navigateurs.
+Par ailleurs, la taille importante des données a rendu leur hébergement sur GitHub impraticable. Nous avons donc exploré des alternatives plus adaptées pour gérer et visualiser efficacement ces données volumineuses tels que Amazon web services.
