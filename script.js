@@ -63,7 +63,7 @@ function showGeoParquetMap() {
     mapContainer.innerHTML = '<iframe src="map_from_geoparquet.html" width="100%" height="500px" frameborder="0"></iframe>';
 
     const secondaryMap = document.getElementById('map-secondary');
-    secondaryMap.innerHTML = '<iframe src="map_visualization_from_url.html" width="100%" height="500px" frameborder="0"></iframe>';
+    secondaryMap.innerHTML = '<iframe src="Geoparquetmap.html" width="100%" height="500px" frameborder="0"></iframe>';
     secondaryMap.style.display = 'block'; // Ensure the second map is visible
 
     document.getElementById('format-description').innerText = 'Visualisation du fichier GeoParquet.';
@@ -80,7 +80,7 @@ function showGeoJsonMap() {
     mapContainer.innerHTML = '<iframe src="map_with_geojson.html" width="100%" height="500px" frameborder="0"></iframe>';
 
     const secondaryMap = document.getElementById('map-secondary');
-    secondaryMap.innerHTML = '<iframe src="geojsonmap.html" width="100%" height="500px" frameborder="0"></iframe>';
+    secondaryMap.innerHTML = '<iframe src="Geojson_map.html" width="100%" height="500px" frameborder="0"></iframe>';
     secondaryMap.style.display = 'block'; // Ensure the second map is visible
 
     // Update the format description
