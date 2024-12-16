@@ -70,7 +70,7 @@ main {
     line-height: 1.8;
 }
 
-/* Oval Button Section */
+/* Section Layout */
 #intro {
     display: flex;
     justify-content: space-evenly;
@@ -81,43 +81,48 @@ main {
     padding: 20px 0;
 }
 
-.oval-button {
-    width: 220px;
-    height: 300px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.5rem;
+/* Card Layout */
+.card {
+    width: 280px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2e2e2e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
     cursor: pointer;
-    border: none;
-    text-transform: uppercase;
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Individual Oval Colors */
-.oval-button:nth-child(1) {
-    background: linear-gradient(145deg, #d4a090, #c08a78);
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.oval-button:nth-child(2) {
-    background: linear-gradient(145deg, #a67c6b, #d4a090);
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover; /* Ensures the image scales and crops appropriately */
 }
 
-.oval-button:nth-child(3) {
-    background: linear-gradient(145deg, #4a3b3b, #6c5656);
+/* Card Title */
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff9f00;
+    margin: 10px 0;
 }
 
-.oval-button:nth-child(4) {
-    background: linear-gradient(145deg, #c08a78, #d4a090);
-}
-
-.oval-button:hover {
-    transform: scale(1.1);
-    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+/* Card Description */
+.card-description {
+    font-size: 1rem;
+    color: #e0e0e0;
+    padding: 0 10px 20px;
+    line-height: 1.5;
 }
 
 /* Statistics Button */
