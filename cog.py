@@ -48,3 +48,4 @@ m.save("morocco_cog_visualization.html")
 print("Map has been saved as 'morocco_cog_visualization.html'. Open this file in your browser to view the map.")
 
 
+
