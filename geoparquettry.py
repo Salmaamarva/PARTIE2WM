@@ -1,12 +1,10 @@
-
-
 import pydeck as pdk
 import geopandas as gpd
 import requests
 from io import BytesIO
 
 # URL of the GeoParquet file
-url = "https://salmaamarva.github.io/GEOJ/pop.parquet"
+url = " https://salmaamarva.github.io/geojson/points.parquet"
 
 # Download the GeoParquet file
 response = requests.get(url)
@@ -54,7 +52,7 @@ deck = pdk.Deck(
             data=gdf,
             get_position='[longitude, latitude]',  # Use the explicit longitude and latitude columns
             get_color='[255, 0, 0, 160]',  # Red color for the dots
-            get_radius=2000,  # Set radius for better visibility
+            get_radius=1000,  # Set radius for better visibility
             pickable=True,  # Enable interactivity
             tooltip=True,  # Show tooltips
         ),
@@ -64,3 +62,4 @@ deck = pdk.Deck(
 
 # Export the visualization to an HTML file
 deck.to_html('map_visualization_from_url.html', notebook_display=False)
+
