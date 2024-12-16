@@ -19,12 +19,29 @@
                 Bienvenue sur notre platform Web . Explorer les differents formats de données géospatiales, notamment GeoJSON, GeoParquet, COG, and Zarr. Découvrir comment ces formats sont visualiser et utilisé pour des cartes.
             </p>
         </div>
-        <section id="intro">
-            <div class="oval-button" onclick="showCOGMap()">COG</div>
-            <div class="oval-button" onclick="showGeoJsonMap()">GEOJSON</div>
-            <div class="oval-button" onclick="showGeoParquetMap()">GEOPARQUET</div>
-            <div class="oval-button" onclick="showDemo('zarr')">ZARR</div>
-        </section>
+    <!-- Introduction Section -->
+    <section id="intro">
+        <div class="card" onclick="showCOGMap()">
+            <img src="images/image1.png" alt="Interactive Maps" class="card-image" />
+            <div class="card-title">Interactive Maps</div>
+            <div class="card-description">Explore geospatial data visually.</div>
+        </div>
+        <div class="card" onclick="showGeoJsonMap()">
+            <img src="images/image2.png" alt="Data Analytics" class="card-image" />
+            <div class="card-title">Data Analytics</div>
+            <div class="card-description">Analyze trends and patterns in data.</div>
+        </div>
+        <div class="card" onclick="showGeoParquetMap()">
+            <img src="images/image3.png" alt="Geospatial Insights" class="card-image" />
+            <div class="card-title">Geospatial Insights</div>
+            <div class="card-description">Discover spatial relationships.</div>
+        </div>
+        <div class="card" onclick="showDemo('zarr')">
+            <img src="images/image4.png" alt="ZARR Format" class="card-image" />
+            <div class="card-title">ZARR Format</div>
+            <div class="card-description">Work with scalable data formats.</div>
+        </div>
+    </section>
 <button class="stat-button" onclick="showStats()">STATISTIQUES</button>
         <section id="demo">
             <div id="demo-text">
