@@ -1,7 +1,7 @@
 import folium
 import requests
 
-geojson_url = "https://salmaamarva.github.io/geojson/1.geojson"
+geojson_url = " https://salmaamarva.github.io/geojson/points.geojson"
 
 try:
     # Fetch GeoJSON from URL with timeout
